@@ -26,3 +26,13 @@ void print_triangle(int leftCol, int size)
   }
 }
 
+// Prints a arrow utilizing print_square and print_triangle functions
+void print_arrow(int leftCol, int size)
+{
+  //Calculates the alignment of the triangle and square
+  int triangleBase = (2 * size) + 1;
+  int startCol = leftCol + (triangleBase - size) / 2;
+  
+  print_triangle(leftCol, size);
+  print_square(startCol, size);
+}
